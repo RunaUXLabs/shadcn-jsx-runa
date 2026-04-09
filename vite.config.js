@@ -21,4 +21,6 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  base: "/shadcn-jsx-runa/",
+  // GitHub Pages에 뜨게하기위한 필수설정!
 });
