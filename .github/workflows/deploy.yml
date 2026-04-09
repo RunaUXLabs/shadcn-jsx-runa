@@ -6,6 +6,10 @@ on:
   push:
     branches: ["main"]
 
+# Actions 실행 환경을 Node 24로 강제
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 # 저장소의 토큰 권한 설정
 permissions:
   contents: read
@@ -30,7 +34,7 @@ jobs:
       - name: Node.js 설정
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 24
           cache: 'npm'
 
       - name: 패키지 설치
